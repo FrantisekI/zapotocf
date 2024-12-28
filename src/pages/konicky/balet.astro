@@ -3,6 +3,7 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { YouTube } from 'astro-embed';
 
 const hobbies = [
     {
@@ -48,20 +49,23 @@ const hobbies = [
 				</p></i>
 			</section>
 			<section>
-				<video controls>
-					<source src="/bigfiles/posledni_zacatek.mp4">
+				<!-- <video controls>
+					<source src="https://youtu.be/FrWQsRKKDT4">
 					Sorry, your browser doesn't support embedded videos.
-				</video>
+				</video> -->
+				<YouTube id="https://youtu.be/FrWQsRKKDT4" />
 				Choreografie "Poslední začátek" - doufám.
-				<video controls>
-					<source src="/bigfiles/spanelak.mp4">
+				<!-- <video controls>
+					<source src="https://youtu.be/zQoLZZb5jKE">
 					Sorry, your browser doesn't support embedded videos.
-				</video>
+				</video> -->
+				<YouTube id="https://youtu.be/zQoLZZb5jKE" />
 				Klasická choreografie "Španělský tanec".
-				<video controls>
-					<source src="/bigfiles/na_lovu.mp4">
+				<!-- <video controls>
+					<source src="https://youtu.be/QJUYKPjcSZA">
 					Sorry, your browser doesn't support embedded videos.
-				</video>
+				</video> -->
+				<YouTube id="https://youtu.be/QJUYKPjcSZA" />
 				Moderní "Na lovu".
 			</section>
 		</main>

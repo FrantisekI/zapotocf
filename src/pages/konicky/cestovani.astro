@@ -1,0 +1,41 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+---
+
+<!doctype html>
+<html lang="cs">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header />
+
+        <main>
+            <h1>Cestování / cyklistika</h1>
+            <section>
+                <p>
+                    Původně jsem měl v plánu sem dávat mapu kde jsem byl, ale
+                    jsem teďka nějak jsem nějak línej.
+                </p>
+            </section>
+            <section>
+                <p>
+                    Tak sem alespoň dám takovýto výčet na co si zrovna vzpomenu.
+                    Byl jsem:
+                </p>
+            </section>
+            <section>
+                Na kole ve Švýcarsku a Rujáně.
+            </section>
+            <section>
+                Loňi jseb byl na kole tak jako v Jičíně.
+                lol, vlastně nevím, co jsem dělal minulé prázdniny
+            </section>
+        </main>
+        <Footer />
+    </body><script></script>
+    <style></style>
+</html>

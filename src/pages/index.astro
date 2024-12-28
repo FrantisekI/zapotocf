@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="cs">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		
+		<main>
+			<div class="section-with-picture-right">
+				<section class="text">
+					<h2>Zdravím,</h2>
+					<p>
+						Jsem František a jsem studentem informatiky na <a href="https://www.mff.cuni.cz/">Matematicko-fyzikální fakultě
+						Univerzity Karlovy</a>.
+						<br>
+						Především mě baví matematika, programování a nějaký ten sport.
+					</p>
+				</section>
+				<div class="picture">
+					<img src="/ja.jpg" alt="Hero image" />
+				</div>
+			</div>
+			<section>
+				<p>
+					Pocházím z Liberce, kde jsem studoval Elektrotechniku na
+					"<a href="https://prumyslovkaliberec.cz">Průmce</a>" a dělal balet (ten tak nějak dělám pořád).
+					<br>
+					Ve volném čase chodím/jezdím na kole/lyžích na výlety a hraji Dračí doupě.
+				</p>
+			</section>
+				
+			
+		</main>
+		<Footer />
+	</body>
+</html>

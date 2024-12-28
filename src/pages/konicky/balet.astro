@@ -1,0 +1,73 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+const hobbies = [
+    {
+        title: "Balet",
+        content: "Jsem baletista a mě baví balet. Balet je mě baví, jen bavím.",
+        link: "",
+    }]
+---
+
+<!doctype html>
+<html lang="cs">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+		<main>
+			<h1>Balet</h1>
+			<section>
+				<p>
+					Do minulého školního roku jsem dělal balet v ZUŠ Liberec.
+					Ne úplně často chodím stále, ale už to není co to bývalo,
+					vlastně mi to celkem chybí.
+				</p>
+				<p>
+					Několikrát jsem se "spolužáky" byl na nějakých baletních
+					soutěžích a předtančeních na plesech.
+				</p>
+				<p>
+					Uvědomuji si však, že nejsem úplně nejlepší, ostatně proto
+					jsem šel studovat informatiku a ne konzervatoř.
+				</p>
+			</section>
+			<section>
+				<p>
+					Dal jsem sem i nějaká videa, na která se můžete podívat, 
+					jak mi to jde.
+				</p>
+				<p><i>
+					Snad se ostatní nebudou zlobit, že jsem sem dal jejich videa, 
+					ale souhlasili s GDPR, tak to je asi v pořádku.
+				</p></i>
+			</section>
+			<section>
+				<video controls>
+					<source src="/bigfiles/posledni_zacatek.mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+				Choreografie "Poslední začátek" - doufám.
+				<video controls>
+					<source src="/bigfiles/spanelak.mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+				Klasická choreografie "Španělský tanec".
+				<video controls>
+					<source src="/bigfiles/na_lovu.mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+				Moderní "Na lovu".
+			</section>
+		</main>
+		<Footer />
+	</body>
+	<script>
+	</script>
+	<style></style>
+</html>

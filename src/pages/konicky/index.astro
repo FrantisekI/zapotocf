@@ -1,0 +1,91 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+const hobbies = [
+	{
+		title: "Balet",
+		content: "Jou mimochodem, dělám balet, respektive \
+		teď už moc ne, ale podle mě je to celkem parádní.",
+		link: "/konicky/balet",
+	},
+	{
+		title: "Orientační běh",
+		content: 'Od mala jsem byl veden k orientačnímu běhu, ale vzhledem \
+		k častému ztrácení mě to nějak opustilo, pak jsem jen běhal s \
+		ostatními "orienťáky", ale teď jsem na to poslední dobou nějak \
+		líný.',
+		link: "https://www.vlio.cz/",
+	},
+	{
+		title: "Běh na lyžích",
+		content: "Lyžování provozuji buď samostatně - jako víkendovou zábavu \
+		nebo se zhruba podobnými lidmi, jako orientační běh. \
+		A tady jsem dokonce na tréningy ještě chodit nepřestal.",
+		link: "",
+	},
+	{
+		title: "Cestování / cyklistika",
+		content: "No, když jsou prázdniny, tak asi nemam nic lepšího na práci.",
+		link: "/konicky/cestovani",
+	},
+	{
+		title: "Programování / matematika",
+		content: "to by sem sice asi mohlo patřit, ale asi to nechám na Kariéře.",
+		link: "/kariera",
+	},
+	{
+		title: "Videohry",
+		content: "Jakože už jsem párkrát hrál Minecraft, \
+		a nedávno jsem dělal webovou stránku pro klan v ClashOfClans, \
+		tak jsem se o tom chtěl tady zmínit.",
+		link: "https://omcz.deno.dev/",
+	},
+];
+---
+
+<!doctype html>
+<html lang="cs">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+		<main>
+			<h1>Koníčky</h1>
+
+			{
+				hobbies.map((hobby) =>
+					hobby.link ? (
+						<a href={hobby.link} class="do-not-color">
+							<section>
+								<h3>{hobby.title}</h3>
+								<p>{hobby.content}</p>
+							</section>
+						</a>
+					) : (
+						<section>
+							<h3>{hobby.title}</h3>
+							<p>{hobby.content}</p>
+						</section>
+					),
+				)
+			}
+
+			<!-- <section>
+				<p>
+					Pocházím z Liberce, kde jsem studoval Elektrotechniku na
+					<a href="https://prumyslovkaliberec.cz">"Průmce"</a> a dělal
+					balet (ten tak nějak dělám pořád).
+					<br />
+					Ve volném čase chodím/jezdím na kole/lyžích na výlety a hraji
+					Dračí doupě.
+				</p>
+			</section> -->
+		</main>
+		<Footer />
+	</body><style></style>
+</html>

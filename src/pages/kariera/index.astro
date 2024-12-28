@@ -1,0 +1,88 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+const elements = [
+	{
+		title: "Škola",
+		content: "Pocházím z Liberce, tak jsem zde slaboproudou elektrotechniku \
+		studoval SPŠSE (maturita v r. 2024). Nyní jsem na vysokou školu přešel na MFF UK \
+		ale zvolil jsem si radši informatiku.",
+		link: "",
+	},
+	{
+		title: "Praxe",
+		content: "Při výběru brigády se většinou spíše zaměřuji na to, aby to \
+		bylo nějak technické, díky studiu na průmyslové škole a ne gymnáziu \
+		to je výrazně jednodušší, byl jsem v: <br>\
+		Cetinu - měsíc o prázdninách, <br>\
+		Benteleru - taky o prázdninách, ale byl to spíš silnoproudé, <br>\
+		HiFi Klubu Liberec - tam jsem asi od 2. ročníku SŠ a pouštím muziku na \
+		FC Slovan Liberec",
+		link: "",
+	},
+	{
+		title: "Ocenění",
+		content: "Za svojí dobu studování jsem jich vlastně pozbíral celkem \
+		hodně. Jmenovitě: <br>\
+		10. místo na celostátní matematické olympiádě, <br>\
+		účastník STAR program - mezinárodní matematické soutěže \
+		pro rozvojové země, <br>\
+		byl jsem na Logické olympiádě, soutěži od Jablotonu (3.), obdržel jsem \
+		stypendium od Magna International",
+		link: "",
+	},
+];
+---
+
+<!doctype html>
+<html lang="cs">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+		<main>
+			<h1>Koníčky</h1>
+			<p>
+				Můžete se na mě obrátit s programováním, slaboproudou
+				elektrotechnikou vlastně mě celkem i baví nějaká fyzická práce.
+				<br />
+				Myslím mi celkem jde matematika - dělal jsem matematickou olympiádu,
+				ale radši jsem šel studovat informatiku, abych mohl dělat i něco
+				užitečného.
+			</p>
+
+			{elements.map((element) => (
+				element.link ? (
+					<a href={element.link} class="do-not-color">
+						<section>
+							<h3>{element.title}</h3>
+							<p set:html={element.content} />
+						</section>
+					</a>
+				) : (
+					<section>
+						<h3>{element.title}</h3>
+						<p set:html={element.content} />
+					</section>
+				)
+			))}
+
+			<!-- <section>
+				<p>
+					Pocházím z Liberce, kde jsem studoval Elektrotechniku na
+					<a href="https://prumyslovkaliberec.cz">"Průmce"</a> a dělal
+					balet (ten tak nějak dělám pořád).
+					<br />
+					Ve volném čase chodím/jezdím na kole/lyžích na výlety a hraji
+					Dračí doupě.
+				</p>
+			</section> -->
+		</main>
+		<Footer />
+	</body><style></style>
+</html>

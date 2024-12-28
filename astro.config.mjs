@@ -1,13 +1,16 @@
-// // @ts-check
-// import { defineConfig } from 'astro/config';
-// import mdx from '@astrojs/mdx';
-// import sitemap from '@astrojs/sitemap';
+// @ts-check
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
-// // https://astro.build/config
-// export default defineConfig({
-// 	site: 'https://example.com',
-// 	integrations: [mdx(), sitemap()],
-// });
+import netlify from '@astrojs/netlify';
+
+// https://astro.build/config
+export default defineConfig({
+  site: 'https://example.com',
+  integrations: [mdx(), sitemap()],
+  adapter: netlify(),
+});
 
 // import { defineConfig } from 'astro/config';
 
@@ -15,10 +18,11 @@
 //   output: 'static' // This is actually the default
 // });
 
-import { defineConfig } from 'astro/config';
-import deno from '@deno/astro-adapter';
 
-export default defineConfig({
-  output: 'server',
-  adapter: deno(),
-});
+// import { defineConfig } from 'astro/config';
+// import deno from '@deno/astro-adapter';
+
+// export default defineConfig({
+//   output: 'server',
+//   adapter: deno(),
+// });

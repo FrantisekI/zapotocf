@@ -9,8 +9,16 @@
 // 	integrations: [mdx(), sitemap()],
 // });
 
+// import { defineConfig } from 'astro/config';
+
+// export default defineConfig({
+//   output: 'static' // This is actually the default
+// });
+
 import { defineConfig } from 'astro/config';
+import deno from '@deno/astro-adapter';
 
 export default defineConfig({
-  output: 'static' // This is actually the default
+  output: 'server',
+  adapter: deno(),
 });

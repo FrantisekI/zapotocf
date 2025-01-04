@@ -3,13 +3,19 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-import netlify from '@astrojs/netlify';
+// import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://www.ms.mff.cuni.cz/~zapotocf/',
   integrations: [mdx(), sitemap()],
-  adapter: netlify(),
+  // adapter: netlify(),
+
+  server: {
+    host: '0.0.0.0',
+    port: 3003
+  },
+  base: '/',
 });
 
 // import { defineConfig } from 'astro/config';

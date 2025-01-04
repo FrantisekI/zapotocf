@@ -6,7 +6,17 @@ import sitemap from '@astrojs/sitemap';
 // import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
+
 export default defineConfig({
+  site: 'https://www.ms.mff.cuni.cz',
+  base: '/~zapotocf',
+  output: 'static',
+  build: {
+    assets: 'assets'
+  },
+  // trailingSlash: 'always' // This helps with consistent path handling
+});
+/*export default defineConfig({
   site: 'https://www.ms.mff.cuni.cz/~zapotocf/',
   integrations: [mdx(), sitemap()],
   // adapter: netlify(),
@@ -16,7 +26,7 @@ export default defineConfig({
     port: 3003
   },
   base: '/',
-});
+});*/
 
 // import { defineConfig } from 'astro/config';
 

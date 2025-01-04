@@ -46,7 +46,7 @@ const elements = [
 		<Header />
 
 		<main>
-			<h1>Koníčky</h1>
+			<h1>Kariéra</h1>
 			<p>
 				Můžete se na mě obrátit s programováním, slaboproudou
 				elektrotechnikou vlastně mě celkem i baví nějaká fyzická práce.
@@ -58,7 +58,7 @@ const elements = [
 
 			{elements.map((element) => (
 				element.link ? (
-					<a href={element.link} class="do-not-color">
+					<a href={import.meta.env.BASE_URL + element.link} class="do-not-color">
 						<section>
 							<h3>{element.title}</h3>
 							<p set:html={element.content} />

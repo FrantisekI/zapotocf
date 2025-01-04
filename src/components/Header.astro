@@ -5,12 +5,12 @@ import { SITE_TITLE } from "../consts";
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a href={import.meta.env.BASE_URL + '/'}>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Domů</HeaderLink>
-			<HeaderLink href="/kariera">Kariéra</HeaderLink>
+			<HeaderLink href={import.meta.env.BASE_URL + '/'}>Domů</HeaderLink>
+			<HeaderLink href={import.meta.env.BASE_URL + '/kariera'}>Kariéra</HeaderLink>
 			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-			<HeaderLink href="/konicky">Koníčky</HeaderLink>
+			<HeaderLink href={import.meta.env.BASE_URL + '/konicky'}>Koníčky</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/FrantisekI">
@@ -26,10 +26,10 @@ import { SITE_TITLE } from "../consts";
 					></path></svg>
 			</a>
 			<a href="https://www.linkedin.com/in/franti%C5%A1ek-z%C3%A1potock%C3%BD-4094102b7/">
-				<img class="icon" src="/linkedin.svg" alt="linkedin">
+				<img class="icon" src={import.meta.env.BASE_URL + '/linkedin.svg'} alt="linkedin">
 			</a>
 			<a href="mailto:zapotocky.frantisek1@gmail.com">
-				<img class="icon" src="/email.svg" alt="gmail">
+				<img class="icon" src={import.meta.env.BASE_URL + '/email.svg'} alt="gmail">
 			</a>
 		</div>
 	</nav>

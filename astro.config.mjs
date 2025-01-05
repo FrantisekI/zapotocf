@@ -10,6 +10,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.ms.mff.cuni.cz',
   base: '/~zapotocf',
+  integrations: [mdx(), sitemap()],
   output: 'static',
   build: {
     assets: 'assets'

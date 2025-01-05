@@ -12,17 +12,18 @@
 	--dark-accent: hsl(43, 100%, 38%);
 	--text-color: #000;
 	--black: #000;
+	/* --base-url: ''; */
 }
 @font-face {
 	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
+	src: var(--base-url-reg) format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
+	src: var(--base-url-bold) format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -161,7 +162,7 @@ section {
 	padding-bottom: 0;
 }
 .section-with-picture-right { 
-	display:flex;
+	display: flex;
 	justify-content: space-between;
 }
 .section-with-picture-right .picture {
@@ -174,6 +175,24 @@ section {
 	width: 100%;
 	justify-content: flex-end;
 }
+
+@media (max-width: 600px) {
+    .section-with-picture-right {
+        display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+    }
+    
+	.section-with-picture-right .picture {
+		width: 50%;
+	}
+	.section-with-picture-right .text {
+		width: auto;
+	}
+    
+}
+
 .do-not-color {
 	display: block;
 	color: var(--text-color);

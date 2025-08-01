@@ -1,3 +1,12 @@
+# My personal website
+
+You can find the website on https://www.ms.mff.cuni.cz/~zapotocf/ .
+
+It is writtent in Astro.
+
+The rest is how to run a basic astro app, which this one is:
+
+
 # Astro Starter Kit: Blog
 
 ```sh
